@@ -2,9 +2,9 @@
 from flask import Flask, redirect, request, render_template
 import os
 from joblib import load
-from pos_tagger import predict_POS_model
+# from pos_tagger import predict_POS_model
 from CNLTK import preprocessing, pos_tagger, ner
-import string 
+# import string 
 
 app = Flask(__name__)
 # set file directory path
