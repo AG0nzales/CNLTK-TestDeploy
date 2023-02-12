@@ -1,6 +1,5 @@
 git+https://www.github.com/keras-team/keras-contrib.git
 CNLTK-Beta==1.0.1
-turtle
 joblib
 Tk
 tkinter
