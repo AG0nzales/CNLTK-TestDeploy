@@ -2,3 +2,13 @@ git+https://www.github.com/keras-team/keras-contrib.git
 CNLTK-Beta==1.0.1
 turtle
 joblib
+Tk
+tkinter
+tensorflow
+keras
+plot-keras-history
+tensorflow_addons
+keras-self-attention
+attention
+nltk
+git+https://www.github.com/keras-team/keras-contrib.git
