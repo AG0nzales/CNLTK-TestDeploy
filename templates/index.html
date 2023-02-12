@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>{{title}}</title>
+<!-- CUSTOM CSS & JS -->
+<link rel= "stylesheet" href= "{{ url_for('static',filename='stylez.css')}}">
+<script src="{{url_for('static', filename='scripts.js')}}"></script>
+
+
+    <script src="https://use.fontawesome.com/beebdf90d8.js"></script>
+
+</head>
+<body>
+    <div class="canvas">
+        <div class="content">
+        <span class="slide">
+            <a href="#" onclick="openSlideMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </span>
+    
+        <div id="menu" class="nav">
+            
+            <a href="#" class="close" onclick="closeSlideMenu()">
+                 <i class="fa fa-times"></i>
+            </a>
+            <h2>CNLTK </h2>
+            <a href="{{ url_for('api') }}">API Reference</a>
+            <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">FAQ</a>
+            <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">CNLTK on GitHub</a>
+
+            <div class="show">
+                <a href="{{ url_for('index') }}">CNLTK Documentation</a>
+                <a href="{{ url_for('method') }}">CNLTK Methods</a>
+                <a href="{{ url_for('data') }}">CNLTK Data</a>
+                <a href="{{ url_for('data') }}">CNLTK Data</a>
+
+                <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK</a>
+                <!-- <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK Data</a> -->
+                </div>
+        </div>
+
+
+        <div class="sides" >
+            <h1>CNLTK</h1>
+            <a href="{{ url_for('index') }}">CNLTK Documentation</a>
+            <a href="{{ url_for('method') }}">CNLTK Methods</a>
+            <a href="{{ url_for('data') }}">CNLTK Data</a>
+    
+            <h3>Installation</h3>
+            <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK</a>
+            <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK Data</a>
+        </div>
+        
+        </div>
+
+        <div class="content2">
+            <div class="docs">
+                <h1>Documentation</h1>
+            <h2 style="padding-top: 3%; font-size: larger;">Cebuano Natural Language Toolkit</h2>
+            <p style="line-height: 1.5;">CNLTK is a platform alike NLTK which serves as a guide and demo, it  is also a platform for building Python programs to work with Cebuano language data. It provides easy-to-use interfaces, current available corpora sourced from Newspaper articles and Medical texts in the Cebuano language, along with a suite of text processing libraries. 
+                Thanks to hands-on guides introducing programming fundamentals alongside topics in computational linguistics, plus comprehensive API documentation, CNLTK is suitable for linguists, engineers, students, educators, researchers, and industry users alike which plays around with Cebuano language datasets. </p>
+
+            <p style="line-height: 1.5;">CNLTK is inspired to NLTK which has been called “a wonderful tool for teaching, and working in, computational linguistics,” and “an amazing library to play with natural language.”</p>
+                   
+            <h2 style="padding-top: 5%;">Some simple things you can do with  CNLTK</h2>
+
+            <h2 style="font-weight: lighter; padding-top: 2%; font-size: large;">Preprocess some texts:</h2>
+
+            <img src="{{url_for('static', filename='prepro2.png')}}" />
+
+            <h2 style="font-weight: lighter; padding-top: 3%; font-size: large;">Identify Named Entities:</h2>
+
+            <img src="{{url_for('static', filename='ner2.png')}}" />
+
+            <h2 style="font-weight: lighter; padding-top: 3%; font-size: large;">Tokenize and Tag some texts:</h2>
+
+            <img src="{{url_for('static', filename='pos2.png')}}" />
+
+
+        </div>
+    </div>
+    
+</body>
+</html>

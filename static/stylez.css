@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap');
+
+body {
+    font-family: 'Alegrya Sans', sans-serif;
+    /* overflow-x: hidden; */
+}
+
+.nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    /* opacity: .9; */
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.7s;
+}
+
+.nav a{
+    display: block;
+    padding: 10px 30px;
+    font-size: larger;
+    text-decoration: none;
+    color: #ccc;   
+}
+
+.nav h2{
+    display: block;
+    padding: 5px 30px;
+    font-size: larger;
+    color: #ccc;   
+}
+
+.nav:hover {
+    color: rgb(141, 141, 141);
+    transition: 0.4s;
+
+}
+
+.nav .close {
+    position: absolute;
+    top: 0;
+    right: 6px;
+    margin-left: 50px;
+    font-size: 30px;
+
+}
+
+.slide a {
+    color: #000;
+    font-size: 30px;
+
+}
+
+.canvas {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    /* overflow: hidden;
+    float: left;
+    position: fixed;
+    margin: auto; */
+
+    flex-basis:20%;
+}
+
+.content2 {
+    /* overflow: hidden;
+    float: left;
+    position: fixed;
+    margin: auto; */
+
+    flex-basis:50%;
+    display: block;
+    margin-left: 10%;
+}
+
+
+.content h1, h3, a{
+    display: block;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #111;
+}
+
+.docs {
+    padding-top: 5%;
+    padding-right: 5%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.docs img {
+    max-width: 100%;
+    width: 700px;
+}
+
+.sides a{
+    font-size: larger;
+    /* padding: 3%; */
+}
+
+.button:hover {background-color: #0c2a06}
+
+.button:active {
+  background-color: #153016;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .sides
+    {display:none;}
+   }
+
+   @media only screen and (min-width: 680px) {
+    .show {
+      display:none;
+    }
+  }
+

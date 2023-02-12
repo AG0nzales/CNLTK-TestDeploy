@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>{{title}}</title>
+<!-- CUSTOM CSS & JS -->
+<link rel= "stylesheet" href= "{{ url_for('static',filename='stylez.css')}}">
+<script src="{{url_for('static', filename='scripts.js')}}"></script>
+
+
+    <script src="https://use.fontawesome.com/beebdf90d8.js"></script>
+
+</head>
+<body>
+    <div class="canvas">
+        <div class="content">
+            <span class="slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </span>
+        
+            <div id="menu" class="nav">
+                
+                <a href="#" class="close" onclick="closeSlideMenu()">
+                     <i class="fa fa-times"></i>
+                </a>
+                <h2>CNLTK</h2>
+                <a href="{{ url_for('api') }}">API Reference</a>
+                <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">FAQ</a>
+                <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">CNLTK on GitHub</a>
+
+                <div class="show">
+                    <a href="{{ url_for('index') }}">CNLTK Documentation</a>
+                    <a href="{{ url_for('method') }}">CNLTK Methods</a>
+                    <a href="{{ url_for('data') }}">CNLTK Data</a>
+                    <a href="{{ url_for('data') }}">CNLTK Data</a>
+    
+                    <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK</a>
+                    <!-- <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK Data</a> -->
+                    </div>
+            </div>
+            <div class="sides">
+                <h1>CNLTK</h1>
+                <a href="{{ url_for('index') }}">CNLTK Documentation</a>
+                <a href="{{ url_for('method') }}">CNLTK Methods</a>
+                <a href="{{ url_for('data') }}">CNLTK Data</a>
+        
+                <h3>Installation</h3>
+                <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK</a>
+                <!-- <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK Data</a> -->
+            </div>
+            
+            </div>
+    
+        <div class="content2">
+            <div class="docs">
+                <h1>CNLTK Data Documentation</h1>
+            <h2 style="padding-top: 3%;">About the corpus</h2>
+            <p style="padding-top: 1%; font-size: large; line-height: 1.5;">
+                The Sentences for CNLTK are medical data scraped from medical news articles on the websites of SunStar News, Brigada News Philippines, The Official site of the City Government of Davao, MindaNews, Philippines Information Agency, Brigada News Davao's twitter account, Bombo Radyo Philippines' website, MIMS' website, webMD, Philippine News Agency, and GetMEDS.ph. These were the data sources chosen 
+                because they provided the medical news articles written in Cebuano that were required for the dataset used for the Cebuano Natural Language Toolkit.
+            </p>
+            
+            
+            <p style="padding-top: 4%; font-size: large;">Corpus Sentences:</p>
+            <img style="width: 500px; max-width: 100%;" src="{{url_for('static', filename='sentence.png')}}" />
+            
+            <h2 style="padding-top: 5%;">About the Annotation</h2>
+            <p style="padding-top: 1%; font-size: large; line-height: 1.5;">
+                After gathering a large number of Cebuano sentences (over a thousand), the sentences were manually annotated and the annotations for each sentence were based on their contextual English counterpart. Following the manual annotation of the thousand sentences gathered, professional consultation was the next step. To validate the manually annotated dataset, three validators were approached. The validators were able to identify errors in the manually annotated dataset, 
+                most of which were related to Cebuano particles mentioned by one of the validators; the validation was primarily focused on the Part of Speech Tags annotation. One of the validators loaned a book about Cebuano Grammars to read; the book contained everything needed to know about Cebuano sentence construction.    
+            </p>
+
+            <p style="padding-top: 4%; font-size: large;">Annotated Corpus Sentences:</p>
+            <img style="width: 500px; max-width: 100%;"src="{{url_for('static', filename='corpus.png')}}" />
+    
+    
+    
+        </div>
+    </div>
+</body>
+</html>

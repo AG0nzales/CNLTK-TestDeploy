@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>{{title}}</title>
+<!-- CUSTOM CSS & JS -->
+<link rel= "stylesheet" href= "{{ url_for('static',filename='stylez.css')}}">
+<script src="{{url_for('static', filename='scripts.js')}}"></script>
+
+
+    <script src="https://use.fontawesome.com/beebdf90d8.js"></script>
+
+</head>
+<body>
+    <div class="canvas">
+        <div class="content">
+            <span class="slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </span>
+        
+            <div id="menu" class="nav">
+                
+                <a href="#" class="close" onclick="closeSlideMenu()">
+                     <i class="fa fa-times"></i>
+                </a>
+                <h2>CNLTK</h2>
+                <a href="{{ url_for('api') }}">API Reference</a>
+                <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">FAQ</a>
+                <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">CNLTK on GitHub</a>
+
+                <div class="show">
+                    <a href="{{ url_for('index') }}">CNLTK Documentation</a>
+                    <a href="{{ url_for('method') }}">CNLTK Methods</a>
+                    <a href="{{ url_for('data') }}">CNLTK Data</a>
+                    <a href="{{ url_for('data') }}">CNLTK Data</a>
+    
+                    <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK</a>
+                    <!-- <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK Data</a> -->
+                    </div>
+            </div>
+            <div class="sides">
+                <h1>CNLTK</h1>
+                <a href="{{ url_for('index') }}">CNLTK Documentation</a>
+                <a href="{{ url_for('method') }}">CNLTK Methods</a>
+                <a href="{{ url_for('data') }}">CNLTK Data</a>
+        
+                <h3>Installation</h3>
+                <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK</a>
+                <!-- <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK Data</a> -->
+            </div>
+            
+            </div>
+    
+        <div class="content2">
+            <div class="docs">
+                <h1>Documentation</h1>
+            <h2 style="padding-top: 3%;">cnltk package</h2>
+            <p style="padding-top: 3%; font-size: larger; line-height: 1.5;">The Cebuano Natural Language Toolkit (CNLTK) is a Python library for Natural Language Processing.  (If you use the library for academic research, please cite the study.)</p>
+            <p style="padding-top: 1%; font-size: medium; line-height: 1.5; font-weight: lighter;">Joshua Gonzales, J-Adrielle Gustilo, and Glenn Nituda (2022). Natural Language Processing with Python. University of the Immaculate Conception.</p>
+            
+            <p style="padding-top: 4%; font-size: large;">version: 1.0.1</p>
+            <img src="{{url_for('static', filename='demo2.png')}}" />
+    
+            <h2 style="font-weight: lighter; padding-top: 2%; font-size: larger; font-weight: 500;">Subpackages</h2>
+            <ul style="font-size: medium;">
+                <li style="padding-top: 1%;">vocabulary.get_VOCAB_model()</li>
+                <li style="padding-top: 1%;">POS_TAGGER_MODEL.get_POS_TAGGER_model()</li>
+                <li style="padding-top: 1%;">NER_TAGGER_MODEL.get_NER_TAGGER_model()</li>
+                <li style="padding-top: 1%;">POS_NER_tags.get_POS_TAGS()</li>
+                <li style="padding-top: 1%;">POS_NER_tags.get_NER_TAGS()</li>
+            </ul>
+    
+            <h2 style="font-weight: lighter; padding-top: 2%; font-size: large;">Preprocessing modules</h2>
+    
+            <ul style="font-size: large;">
+                <li style="padding-top: 1%;">preprocessing._POS(sentence_variable)</li>
+                <li style="padding-top: 1%;">preprocessing._NER(sentence_variable)</li>
+            </ul>
+    
+            <h2 style="font-weight: lighter; padding-top: 2%; font-size: large;">POS Tagger modules</h2>
+    
+            <ul style="font-size: large;">
+                <li style="padding-top: 1%;">POS_TAGGER_MODEL.get_POS_TAGGER_model()</li>
+                <li style="padding-top: 1%;">POS_NER_tags.get_POS_TAGS()</li>
+                <li style="padding-top: 1%;">POS_test.predict_POS_model()</li>
+            </ul>
+    
+            <h2 style="font-weight: lighter; padding-top: 2%; font-size: large;">Name Entity Recognition modules</h2>
+    
+            <ul style="font-size: large;">
+                <li style="padding-top: 1%;">NER_TAGGER_MODEL.get_NER_TAGGER_model()</li>
+                <li style="padding-top: 1%;">POS_NER_tags.get_NER_TAGS()</li>
+                <li style="padding-top: 1%;">NER_test.predict_NER_model()</li>
+    
+            </ul>
+    
+    
+        </div>
+    </div>
+</body>
+</html>

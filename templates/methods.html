@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>{{title}}</title>
+<!-- CUSTOM CSS & JS -->
+<link rel= "stylesheet" href= "{{ url_for('static',filename='stylez.css')}}">
+<script src="{{url_for('static', filename='scripts.js')}}"></script>
+
+
+    <script src="https://use.fontawesome.com/beebdf90d8.js"></script>
+
+</head>
+<body>
+    <div class="canvas">
+        <div class="content">
+            <span class="slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </span>
+        
+                <div id="menu" class="nav">
+                
+                    <a href="#" class="close" onclick="closeSlideMenu()">
+                        <i class="fa fa-times"></i>
+                    </a>
+                    <h2>CNLTK</h2>
+                    <a href="{{ url_for('api') }}">API Reference</a>
+                    <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">FAQ</a>
+                    <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">CNLTK on GitHub</a>
+
+                    <div class="show">
+                        <a href="{{ url_for('index') }}">CNLTK Documentation</a>
+                        <a href="{{ url_for('method') }}">CNLTK Methods</a>
+                        <a href="{{ url_for('data') }}">CNLTK Data</a>
+                        <a href="{{ url_for('data') }}">CNLTK Data</a>
+        
+                        <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK</a>
+                        <!-- <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK Data</a> -->
+                        </div>
+                </div>
+                <div class="sides">
+                    <h1>CNLTK</h1>
+                    <a href="{{ url_for('index') }}">CNLTK Documentation</a>
+                    <a href="{{ url_for('method') }}">CNLTK Methods</a>
+                    <a href="{{ url_for('data') }}">CNLTK Data</a>
+            
+                    <h3>Installation</h3>
+                    <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK</a>
+                    <!-- <a href="https://github.com/AG0nzales/Cebuano-Natural-Language-Toolkit-Beta">Installing CNLTK Data</a> -->
+                </div>
+            
+        </div>
+    
+        <div class="content2">
+                <div class="docs">
+                    <h1 style="padding-top: 2%;">Cebuano Natural Language Toolkit</h1>
+                <p style="padding-top: 2%; font-size: large; line-height: 1.5;">Cebuano Natural Language Toolkit is built around the Python programming language since Natural Language Processing with Python provides a practical introduction to programming for language processing works. The NLTK book (https://www.nltk.org/book/)  guides the reader through the fundamentals of writing Python programs, working with corpora, categorizing text, analyzing linguistic structure, and more. <br></p>
+                <p style="padding-top: 3%; font-size: large; line-height: 1.5;">In this page users are able to test sample sentences written in the Cebuano texts that will be then passed to the CNLTK model and will return the Preprocessed and Tagged sample sentence. After going through the website, filling out the feedback form would be much appreciated.<br></p>
+                <a href="https://forms.gle/pzA2GQhNBXa9Y7VJ8" style="color: blue;">Click here to access the Cebuano Natural Language Feedback Form</a>
+                    <!-- <h2 style="padding-top: 2%;">Installation<br></h2>
+    
+                    <h3 style="font-weight: lighter; padding-top: 1%; font-size: large;">pip install CNLTK-Beta==1.0.1</h3> -->
+    
+                    <!-- <h2 style="padding-top: 1%;">Sample of CNLTK annotated corpus</h2> -->
+    
+                    <!-- <h3 style="font-weight: lighter; word-spacing: -2px;">The repository and document of the CNLTK can be found in github.com/AG0nzales/CNLTK-Beta <br> </h3> -->
+    
+                    <!-- <h3 style="font-weight: lighter; font-size: large;">import CNLTK <br></h3> -->
+                    <!-- <h3 style="font-weight: lighter; padding-top: 3%; font-size: larger;">Sample CNLTK Corpora<br></h3> -->
+                    <!-- <img style="width: 500px; max-width: 100%;"src="{{url_for('static', filename='corpus.png')}}" /> -->
+
+                    <h2 style="padding-top: 3%;">Part of Speech Tagger</h2>
+            <p style="padding-top: 2%; font-size: large; line-height: 1.5;">
+                The Part Of Speech (POS) Tagger tool assigns parts of speech to each word in a sentence, such as noun, pronoun, verb, adverb, and adjective. A POS tagger's primary function is to provide grammatical information about a text, which is required for a variety of natural language processing (NLP) tasks. The development of this POS Tagger tool, particularly because it uses Cebuano written data, can help to advance NLP applications in that language. 
+                This is especially true for languages with limited resources and support for NLP applications. The creation of a POS Tagger tool will aid in the development of language-specific NLP models for use in a variety of applications such as sentiment analysis, machine translation, and text classification. 
+            </p>
+
+            <h2 style="padding-top: 3%;">Named Entity Recognition</h2>
+            <p style="padding-top: 2%; font-size: large; line-height: 1.5;">
+                The Named Entity Recognition tagger is a tool that uses NER techniques to identify named entities in a given text, such as people, organizations, locations, and so on. A NER tagger's primary function is to extract structured information from unstructured text data. The development of this NER tagger, 
+                particularly because it uses Cebuano written data, can help to advance NLP applications in that language. This is especially true for languages with limited resources and support for NLP applications. The creation of a NER tagger tool will aid in the creation of language-specific NLP models for use in a variety of applications such as information retrieval, question answering, and event extraction.
+            </p>
+
+
+                    <h2 style="padding-top: 5%;">CNLTK Part of Speech and Named Entity Recognition sample Tagger</h2>
+                    <img style="width: 500px; max-width: 100%; padding-bottom: 2%;" src="{{url_for('static', filename='legend.png')}}" /><br>
+
+                    <label style="font-weight: lighter; font-size: large; padding-top: 3%;" for="fname">Input Sample Sentence:</label><br>
+                    <form action="/method" method="POST">
+                        <input style="width:100%; border: 2px solid-black; margin: 8px 0; padding: 12px 20px;
+                        box-sizing: border-box;" type="text" name="pos"><br>
+                        <button class="button" type="submit" style="cursor: pointer; box-shadow: 0 5px #999; border: none; border-radius: 15px; background-color: #4CAF50; padding: 15px 32px; border: none; color: white; font-size: 15px;"> TAG </button> 
+                    </form>
+                    
+<div class="taggers">
+    <h2 style="padding-top: 3%;">Preprocessed Input</h2>
+    <h3 style="font-weight: lighter;" class="preprocessed"> {{preproc}} </h3>
+    
+    <h2 style="padding-top: 3%;">Part of Speech Tagger</h2>
+    <h3 style="font-weight: lighter;" class="postagger"> {{sentz}} </h3>
+    <h3 style="font-weight: lighter;" class="postagger"> {{tagz}} </h3>
+
+    <h2 style="padding-top: 3%;">Named Entity Recognition Tagger</h2>
+    <h3 style="font-weight: lighter;" class="nertagger"> {{sentz2}} </h3>
+    <h3 style="font-weight: lighter;" class="nertagger"> {{tagz2}} </h3>
+</div>
+                    
+    
+    
+            </div>
+    </div>
+</body>
+</html>
