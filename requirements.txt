@@ -1,8 +1,6 @@
 git+https://www.github.com/keras-team/keras-contrib.git
 CNLTK-Beta==1.0.1
 joblib
-Tk
-tkinter
 tensorflow
 keras
 plot-keras-history
